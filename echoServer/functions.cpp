@@ -1,13 +1,12 @@
 #include "functions.h"
-#include <qDebug>
 
 QString caesarCipher(const QString message, int key) {
     QString encryptedMessage;
     for (QChar ch : message) {
         QChar encryptedChar = QChar( (ch.unicode() - 32 + key) % 96 + 32 );
-        if(encryptedChar.unicode() == 127) {
-            encryptedChar = QChar(0);
-        }
+        //if(encryptedChar.unicode() == 127) {
+         //   encryptedChar = QChar(0);
+        //}
         encryptedMessage.append(encryptedChar);
     }
     return encryptedMessage;
