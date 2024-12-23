@@ -1,0 +1,4 @@
+https://hub.docker.com/r/atlityr/server
+
+docker build -t 'server'
+docker run -p 33333:33333 -td server
