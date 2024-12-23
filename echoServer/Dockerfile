@@ -20,6 +20,8 @@ COPY . /Kulibabaev
 RUN qmake echoServer.pro
 RUN make
 
+RUN mv echoServer ProgToStart
+
 EXPOSE 33333
 
-ENTRYPOINT ["/Kulibabaev/echoServer"]
+ENTRYPOINT ["/Kulibabaev/ProgToStart"]
